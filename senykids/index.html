@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SenyKids-clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="scr.js" type="text/Javascript">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <!-- navbar  -->
+
+  <div class="h-full w-full">
+    <!-- Code block starts -->
+    <!--- more free and premium Tailwind CSS components at https://tailwinduikit.com/ --->
+    <nav role="navigation" class="bg-white shadow xl:block hidden">
+      <div class="mx-auto container px-6 py-2 xl:py-0">
+        <div class="flex items-center justify-between">
+          <div class="inset-y-0 left-0 flex items-center xl:hidden">
+            <div
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-100 focus:outline-none transition duration-150 ease-in-out">
+              <div class="visible xl:hidden">
+                <ul class="p-2 border-r bg-white absolute rounded left-0 right-0 shadow mt-8 md:mt-8 hidden">
+                  <li
+                    class="flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-gray-700 focus:outline-none">
+                    <div class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"></path>
+                        <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                        <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                        <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                        <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                      </svg>
+                      <span class="ml-2 font-bold">SHOP</span>
+                    </div>
+                  </li>
+                  <li
+                    class="flex xl:hidden flex-col cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex justify-center"
+                    onclick="dropdownHandler(this)">
+                    <div class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1">
+                        </path>
+                      </svg>
+                      <span class="ml-2 font-bold">GIFT CARDS</span>
+                    </div>
+                  </li>
+                  <li
+                    class="flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass" width="20"
+                      height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="8 16 10 10 16 8 14 14 8 16"></polyline>
+                      <circle cx="12" cy="12" r="9"></circle>
+                    </svg>
+                    <span class="ml-2 font-bold">ABOUT</span>
+                  </li>
+                  <li
+                    class="border-b border-gray-300 flex xl:hidden cursor-pointer text-gray-600 text-sm leading-3 tracking-normal pt-2 pb-4 hover:text-gray-700 flex items-center focus:text-gray-700 focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="20"
+                      height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="7 8 3 12 7 16"></polyline>
+                      <polyline points="17 8 21 12 17 16"></polyline>
+                      <line x1="14" y1="4" x2="10" y2="20"></line>
+                    </svg>
+                    <span class="ml-2 font-bold">CONTACT</span>
+                  </li>
+                  <li
+                    class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                    <div class="flex items-center">
+                      <div class="w-12 ">
+                        <img class="rounded h-10 w-10 object-cover" src="./images/logomain.jpg" alt="logo" />
+                      </div>
+                      <p class="text-sm ml-2 cursor-pointer">Jane Doe</p>
+                      <div class="sm:ml-2 text-white relative">
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                          class="icon icon-tabler icon-tabler-chevron-down cursor-pointer" width="20" height="20"
+                          viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z"></path>
+                          <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                  <li
+                    class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                    <div class="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20"
+                        height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" />
+                        <circle cx="12" cy="7" r="4" />
+                        <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                      </svg>
+                      <span class="ml-2">Profile</span>
+                    </div>
+                  </li>
+                </ul>
+                <svg onclick="MenuHandler(this,true)" aria-haspopup="true" aria-label="Main Menu"
+                  xmlns="http://www.w3.org/2000/svg" class="show-m-menu icon icon-tabler icon-tabler-menu" width="28"
+                  height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z"></path>
+                  <line x1="4" y1="8" x2="20" y2="8"></line>
+                  <line x1="4" y1="16" x2="20" y2="16"></line>
+                </svg>
+              </div>
+              <div class="hidden close-m-menu text-gray-700" onclick="MenuHandler(this,false)">
+                <svg aria-label="Close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" />
+                  <line x1="18" y1="6" x2="6" y2="18" />
+                  <line x1="6" y1="6" x2="18" y2="18" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <button
+            class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 rounded-md flex w-full sm:w-auto items-center sm:items-stretch justify-end sm:justify-start">
+            <div class="flex items-center w-80">
+              <img src="./images/logomain.jpg" alt="">
+
+            </div>
+          </button>
+          <div class="flex">
+            <div class="hidden xl:flex md:mr-6 xl:mr-16">
+              <a href="javascript: void(0)"
+                class="focus:text-indigo-700 border-b-2 border-transparent focus:border-indigo-700 flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                <span class="mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                    <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                    <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                  </svg>
+                </span>
+                SHOP
+              </a>
+              <a href="javascript: void(0)"
+                class="focus:text-indigo-700 border-b-2 border-transparent focus:border-indigo-700 flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                <span class="mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <path
+                      d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1">
+                    </path>
+                  </svg>
+                </span>
+                ABOUT
+              </a>
+              <a href="javascript: void(0)"
+                class="focus:text-indigo-700 border-b-2 border-transparent focus:border-indigo-700 flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                <span class="mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <polyline points="8 16 10 10 16 8 14 14 8 16"></polyline>
+                    <circle cx="12" cy="12" r="9"></circle>
+                  </svg>
+                </span>
+                GIFT CARDS
+              </a>
+              <a href="javascript: void(0)"
+                class="focus:text-indigo-700 border-b-2 border-transparent focus:border-indigo-700 flex px-5 items-center py-6 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:bg-gray-100 focus:outline-none transition duration-150 ease-in-out">
+                <span class="mr-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code" width="20"
+                    height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z"></path>
+                    <polyline points="7 8 3 12 7 16"></polyline>
+                    <polyline points="17 8 21 12 17 16"></polyline>
+                    <line x1="14" y1="4" x2="10" y2="20"></line>
+                  </svg>
+                </span>
+                CONTACT
+              </a>
+            </div>
+            <div class="hidden xl:flex items-center">
+
+              <div class="ml-6 relative">
+                <button aria-label="dropdown"
+                  class="focus:outline-none border-b-2 border-transparent focus:border-indigo-700 py-3  focus:text-indigo-700 text-gray-600 hover:text-indigo-700 flex items-center relative"
+                  onclick="dropdownHandler(this)">
+                  <ul class="p-2 w-40 border-r bg-white absolute rounded right-0 shadow top-0 mt-16 hidden">
+                    <li
+                      class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none">
+                      <a href="" class="focus:underline focus:text-indigo-700 focus:outline-none flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="20"
+                          height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <circle cx="12" cy="7" r="4" />
+                          <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                        </svg>
+                        <span class="ml-2">My Profile</span>
+                      </a>
+                    </li>
+                    <li
+                      class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 focus:text-indigo-700 focus:outline-none flex items-center">
+                      <a href="javascript:void(0)"
+                        class="focus:underline focus:text-indigo-700 focus:outline-none flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-help" width="20"
+                          height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <circle cx="12" cy="12" r="9" />
+                          <line x1="12" y1="17" x2="12" y2="17.01" />
+                          <path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4" />
+                        </svg>
+                        <span class="ml-2">Help Center</span>
+                      </a>
+                    </li>
+                    <li
+                      class="cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-indigo-700 flex items-center focus:text-indigo-700 focus:outline-none">
+                      <a href="javascript:void(0)"
+                        class="focus:underline focus:text-indigo-700 focus:outline-none flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-settings" width="20"
+                          height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                          stroke-linecap="round" stroke-linejoin="round">
+                          <path stroke="none" d="M0 0h24v24H0z" />
+                          <path
+                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                          <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        <span class="ml-2">Account Settings</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div
+                    class="cursor-pointer flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-white transition duration-150 ease-in-out">
+                    <img class="rounded-full h-10 w-10 object-cover" src="./images/logomain.jpg" alt="logo" />
+                  </div>
+                  <div class="ml-2 ">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                      class="icon icon-tabler icon-tabler-chevron-down cursor-pointer" width="20" height="20"
+                      viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z"></path>
+                      <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <nav>
+      <div class="py-4 px-6 w-full flex xl:hidden justify-between items-center bg-white fixed top-0 z-40">
+        <div aria-label="logo" role="img" tabindex="0" class="focus:outline-none w-40">
+
+          <img src="./images/logomain.jpg" alt="">
+        </div>
+        <div class="flex items-center">
+
+          <button id="menu" aria-label="open menu"
+            class="focus:outline-none focus:ring-2 focus:ring-gray-600 rounded-md text-gray-800"
+            onclick="sidebarHandler(true)">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="20" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!--Mobile responsive sidebar-->
+      <div class="absolute w-full h-full transform -translate-x-full z-40 xl:hidden" id="mobile-nav">
+        <div class="bg-gray-800 opacity-50 w-full h-full" onclick="sidebarHandler(false)"></div>
+        <div
+          class="w-64 z-40 fixed overflow-y-auto z-40 top-0 bg-white shadow h-full flex-col justify-between xl:hidden pb-4 transition duration-150 ease-in-out">
+          <div class="px-6 h-full">
+            <div class="flex flex-col justify-between h-full w-full">
+              <div>
+                <div class="mt-6 flex w-full items-center justify-between">
+                  <div class="flex items-center justify-between w-full">
+                    <div class="flex items-center">
+                      <img src="./images/logomain.jpg" alt="">
+
+                    </div>
+                    <button id="cross" aria-label="close menu"
+                      class="focus:outline-none focus:ring-2 rounded-md text-gray-800" onclick="sidebarHandler(false)">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24"
+                        height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"></path>
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+                <ul class="f-m-m">
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-gray-800 pt-10">
+                        <div class="flex items-center">
+                          <div class="w-6 h-6 md:w-8 md:h-8 text-indigo-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-grid"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z"></path>
+                              <rect x="4" y="4" width="6" height="6" rx="1"></rect>
+                              <rect x="14" y="4" width="6" height="6" rx="1"></rect>
+                              <rect x="4" y="14" width="6" height="6" rx="1"></rect>
+                              <rect x="14" y="14" width="6" height="6" rx="1"></rect>
+                            </svg>
+                          </div>
+                          <p tabindex="0"
+                            class="focus:outline-none focus:text-indigo-600 text-indigo-700 xl:text-base text-base ml-3">
+                            SHOP</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-gray-800 pt-8">
+                        <div class="flex items-center justify-between">
+                          <div class="flex items-center">
+                            <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                              <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-puzzle"
+                                viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z"></path>
+                                <path
+                                  d="M4 7h3a1 1 0 0 0 1 -1v-1a2 2 0 0 1 4 0v1a1 1 0 0 0 1 1h3a1 1 0 0 1 1 1v3a1 1 0 0 0 1 1h1a2 2 0 0 1 0 4h-1a1 1 0 0 0 -1 1v3a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-1a2 2 0 0 0 -4 0v1a1 1 0 0 1 -1 1h-3a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1h1a2 2 0 0 0 0 -4h-1a1 1 0 0 1 -1 -1v-3a1 1 0 0 1 1 -1">
+                                </path>
+                              </svg>
+                            </div>
+                            <p tabindex="0"
+                              class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                              ABOUT</p>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="cursor-pointer">
+                      <div class="text-gray-800 pt-8">
+                        <div class="flex items-center">
+                          <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-compass"
+                              viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                              stroke-linecap="round" stroke-linejoin="round">
+                              <path stroke="none" d="M0 0h24v24H0z"></path>
+                              <polyline points="8 16 10 10 16 8 14 14 8 16"></polyline>
+                              <circle cx="12" cy="12" r="9"></circle>
+                            </svg>
+                          </div>
+                          <p tabindex="0"
+                            class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                            GIFT CARDS</p>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="text-gray-800 pt-8 cursor-pointer">
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center">
+                        <div class="w-6 h-6 md:w-8 md:h-8 text-gray-800">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-code"
+                            viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"></path>
+                            <polyline points="7 8 3 12 7 16"></polyline>
+                            <polyline points="17 8 21 12 17 16"></polyline>
+                            <line x1="14" y1="4" x2="10" y2="20"></line>
+                          </svg>
+                        </div>
+                        <p tabindex="0"
+                          class="focus:outline-none focus:text-indigo-600 text-gray-800 xl:text-base md:text-2xl text-base ml-3">
+                          PRODUCT</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="w-full pt-4">
+                <div class="flex justify-center mb-4 w-full">
+                  <div class="relative w-full">
+                    <div class="text-gray-500 absolute ml-4 inset-0 m-auto w-4 h-4">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="16"
+                        height="16" viewBox="0 0 24 24" stroke-width="1" stroke="#A0AEC0" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z"></path>
+                        <circle cx="10" cy="10" r="7"></circle>
+                        <line x1="21" y1="21" x2="15" y2="15"></line>
+                      </svg>
+                    </div>
+                    <input
+                      class="focus:ring-2 focus:ring-gray-600 bg-gray-100 focus:outline-none rounded w-full text-sm text-gray-500 pl-10 py-2"
+                      type="text" placeholder="Search" />
+                  </div>
+                </div>
+                <div class="border-t border-gray-300">
+                  <div class="w-full flex items-center justify-between pt-1">
+                    <div class="flex items-center">
+                      <img alt="profile-pic" src="./images/logomain.jpg" tabindex="0"
+                        class="focus:outline-none  w-8 h-8 rounded-md" />
+                      <p tabindex="0" class="focus:outline-none text-gray-800 text-base leading-4 ml-2">SENY KIDS</p>
+                    </div>
+                    <ul class="flex">
+                      <li class="cursor-pointer text-gray-800 pt-5 pb-3">
+                        <div tabindex="0" class="focus:outline-none focus:text-indigo-600 w-6 h-6 md:w-8 md:h-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-messages"
+                            viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"></path>
+                            <path d="M21 14l-3 -3h-7a1 1 0 0 1 -1 -1v-6a1 1 0 0 1 1 -1h9a1 1 0 0 1 1 1v10"></path>
+                            <path d="M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2"></path>
+                          </svg>
+                        </div>
+                      </li>
+                      <li class="cursor-pointer text-gray-800 pt-5 pb-3 pl-3">
+                        <div tabindex="0" class="focus:outline-none focus:text-indigo-600 w-6 h-6 md:w-8 md:h-8">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-bell"
+                            viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" fill="none"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z"></path>
+                            <path
+                              d="M10 5a2 2 0 0 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6">
+                            </path>
+                            <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                          </svg>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="scr.js"></script>
+
+    <!-- Code block ends -->
+  </div>
+
+
+  <!-- main   -->
+
+  <div class="main " data-aos="zoom-in-up">
+    <div class="main-over " data-aos="zoom-out-up">
+      <div class="text1  text-xs md:text-sm lg:text-lg">
+        <p>HIGHLAND COW BACK IN STOCK!</p>
+      </div>
+
+      <div class="text2  ">
+        <h1><i>Moo</i>-ving on up</h1>
+      </div>
+      <div class="text3  text-xs md:text-sm lg:text-lg">
+        <p>High quality ,breathable bamboo clothing <br>
+          that's great for every kid</p>
+      </div>
+      <div class="links">
+        <a class="shop  text-xs md:text-sm lg:text-sm" href="">SHOP BABY COWS</a>
+        <a class="shop  text-xs md:text-sm lg:text-sm" href="">SHOP TODDLER COWS</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- cards  -->
+
+  <div class="cards mt-5 ">
+
+    <div
+      class="mt-5 mr-2 max-w-sm bg-white border border-gray-200 shadow dark:bg-white-800 dark:border-white-700  text-center"
+      data-aos="fade-up" data-aos-duration="3000">
+      <a href="#">
+        <img class=" w-25 text-center pt-8" src="./images/flex1 (1).jpg" alt="" />
+      </a>
+      <div class="p-5">
+
+        <p class="mb-3 text-xs font-normal text-center text-gray-700 dark:text-gray-400">Made from super soft bamboo &
+          spandex blend for the most delicate skin</p>
+
+      </div>
+    </div>
+    <div
+      class="mt-5 mr-2 max-w-sm bg-white border border-gray-200 shadow dark:bg-white-800 dark:border-white-700 text-center"
+      data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <a href="#">
+        <img class=" w-25 pt-8" src="./images/flex2.jpg" alt="" />
+      </a>
+      <div class="p-5">
+
+        <p class="text-xs mb-3 font-normal text-center text-gray-700 dark:text-gray-400">High-quality, eco-friendly
+          materials with extreme stretch for longevity</p>
+
+      </div>
+    </div>
+    <div
+      class="mt-5 mr-2 max-w-sm bg-white border border-gray-200 shadow dark:bg-white-800 dark:border-white-700  text-center"
+      data-aos="fade-up" data-aos-duration="3000">
+      <a href="#">
+        <img class="w-25 pt-7" src="./images/flex3.jpg" alt="" />
+      </a>
+      <div class="p-5">
+
+        <p class="text-xs  font-normal text-center text-gray-700 dark:text-gray-400">Breathability and comfort in the
+          warmest and coolest climates</p>
+
+      </div>
+    </div>
+    <div
+      class="mt-5 max-w-sm bg-white border border-gray-200 shadow dark:bg-white-800 dark:border-white-700  text-center"
+      data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <a href="#">
+        <img class=" w-25 pt-7" src="./images/flex4.jpg" alt="" />
+      </a>
+      <div class="p-5">
+
+        <p class="text-xs font-normal text-center text-gray-700 dark:text-gray-400">Simply stated, classic designs
+          created in collaboration with artists</p>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- shop2 -->
+
+  <div class="row">
+    <div class="col" data-aos="fade-right">
+      <img src="./images/baby21.webp" alt="">
+      <div class="text5"><a href="">
+          <h1>Shop Baby</h1>
+        </a></div>
+    </div>
+    <div class="col" data-aos="fade-left">
+      <img src="./images/baby22.webp" alt="">
+      <div class="text5"><a href="">
+          <h1>Shop Toddler</h1>
+        </a></div>
+    </div>
+  </div>
+
+  <!-- wallpaper -->
+
+  <div class="wallpaper">
+    <div class="wall-text text-xs md:text-sm lg:text-lg ">
+
+      <h4><em>DID YOU KNOW?</em></h4>
+      <br>
+      <p>Bamboo fabric is one of the most eco-friendly fabrics on the planet. When harvesting bamboo, pesticides,
+        chemicals, and machinery aren’t required, so it’s a very natural farming process.</p>
+      <br>
+      <p>The grass also gives back as it generates a large amount of oxygen which is 30% more than most plants and
+        trees.</p>
+
+    </div>
+  </div>
+
+  <!-- flex  -->
+  <div class="flex1">
+
+    <div class="col1 " data-aos="fade-up" data-aos-duration="3000">
+
+      <h1 class="text2  text-center">We believe in giving back</h1>
+      <p class="text1  p-5 text-xs md:text-sm lg:text-lg ">a portion of your purchase will be donated to various
+        children’s <br> charities in the United States</p>
+
+    </div>
+
+    <div class="colu " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <img src="./images/we believe.jpeg" alt="">
+    </div>
+
+  </div>
+
+  <div class="flex2">
+
+    <div class="col-3 " data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+      <img src="./images/meet our.webp" alt="">
+    </div>
+
+    <div class="col-2" data-aos="fade-up" data-aos-duration="3000">
+
+      <h1 class="text2 text-sm-lg text-center">Meet our founder</h1>
+
+      <p class="text1 p-5 text-xs md:text-sm lg:text-lg">On a mission to create cute and functional high-quality baby
+        <br> clothing.
+      </p>
+
+      <a href="" class="story align-middle">OUR STORY</a>
+    </div>
+
+  </div>
+
+
+
+
+
+  <!-- wallpaper2 -->
+
+  <div class="under">
+    <!-- <img class="wall5 h-1/4" width="100%"  src="./images/wall3.png" alt=""> -->
+    <!-- <div class="over text-gray-500 text-black top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> -->
+    <div class="over text-gray-500 text-black ">
+      <h1 class="text2 ">
+        Be the first to know about new arrivals
+      </h1>
+    </div>
+
+
+    <div class="flex">
+      <span
+        class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200   dark:bg-gray-200 dark:text-gray-400 dark:border-gray-600">
+        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+        </svg>
+      </span>
+      <input type="text" id="website-admin"
+        class="rounded-none bg-gray-50 text-gray-900 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-200 dark:placeholder-gray-400 dark:text-gray-500 outline-none "
+        placeholder="First Name">
+    </div>
+
+
+
+    <div class="flex mt-3">
+      <span
+        class="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-200 dark:bg-gray-200 dark:text-gray-400 dark:border-gray-600">
+        <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+          fill="currentColor" viewBox="0 0 20 16">
+          <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z" />
+          <path
+            d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
+        </svg>
+      </span>
+      <input type="text" id="email-address-icon"
+        class="rounded-none bg-gray-50 text-gray-900 block flex-1 min-w-0 w-full text-sm p-2.5  dark:bg-gray-200 dark:placeholder-gray-400 dark:text-gray-500 outline-none"
+        placeholder="Email address">
+    </div>
+
+    <!-- <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
+<div class="relative">
+  <div class="absolute inset-y-0 left-0 flex items-center pl-3.5 pointer-events-none">
+    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+      <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+      <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+    </svg>
+  </div>
+  <input type="text" id="email-address-icon" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="name@flowbite.com">
+</div> -->
+
+
+
+
+
+
+
+  </div>
+
+
+  </div>
+
+
+  <!-- footer  -->
+
+  <footer class="text-white pt-12 pb-8 px-4">
+    <div class="container overflow-hidden flex flex-col lg:flex-row justify-between mx-auto px-4">
+      <h2 class=" mr-2 max-w-xs ">
+        <img width="75%" src="./images/logofinal.webp" alt="">
+      </h2>
+      <div class="w-3/4 block sm:flex text-sm mt-6 lg:mt-0">
+        <ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
+          <li class="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">MORE</li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Baby Zipper
+              Footies</a></li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Toddler
+              Sets</a></li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Gift Cards</a>
+          </li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">About</a></li>
+        </ul>
+        <ul class="text-gray-700 list-none p-0 font-thin flex flex-col text-left w-full">
+          <li class="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">INFO</li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">FAQs</a>
+          </li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Shipping &
+              Returns</a></li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Contact</a>
+          </li>
+          <li><a href="#" class="inline-block py-2 pl-3 pr-5 text-gray-500 hover:text-white no-underline">Size Chart</a>
+          </li>
+        </ul>
+
+        <div class="text-gray-700 flex flex-col w-full">
+          <div class="inline-block py-2 px-3 text-white uppercase font-medium tracking-wide">Follow Us</div>
+          <div class="flex pl-4 justify-start mt-2">
+            <a class="block flex items-center text-gray-300 hover:text-white mr-6 no-underline" href="#">
+              <svg viewBox="0 0 24 24" class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.998 12c0-6.628-5.372-12-11.999-12C5.372 0 0 5.372 0 12c0 5.988 4.388 10.952 10.124 11.852v-8.384H7.078v-3.469h3.046V9.356c0-3.008 1.792-4.669 4.532-4.669 1.313 0 2.686.234 2.686.234v2.953H15.83c-1.49 0-1.955.925-1.955 1.874V12h3.328l-.532 3.469h-2.796v8.384c5.736-.9 10.124-5.864 10.124-11.853z" />
+              </svg>
+            </a>
+            <a class="block flex items-center text-gray-300 hover:text-white mr-6 no-underline" href="#">
+              <svg viewBox="0 0 24 24" class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M23.954 4.569a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.061a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.937 4.937 0 004.604 3.417 9.868 9.868 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 002.46-2.548l-.047-.02z" />
+              </svg>
+            </a>
+            <a class="block flex items-center text-gray-300 hover:text-white no-underline" href="#">
+              <svg viewBox="0 0 24 24" class="fill-current w-5 h-5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="pt-4 mt-4 pt-6 text-gray-600 border-t border-gray-800 flex flex-col md:flex-row justify-center items-center">
+      <div>© 2023 Seny Kids Clone. Privacy Policy | Terms & Conditions | Site Credit</div>
+
+  </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init();
+  AOS.init({
+    duration: 3000,
+  })
+</script>
+
+</html>
